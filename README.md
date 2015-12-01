@@ -17,7 +17,7 @@ A whole Mandrake root placed in the home, will give the house protection, fertil
 Source: http://monsters.monstrous.com/mandrake.htm
 
 ##Documentation
-Documentation is avaible [here](http://mandrake.teamturkeys.com/).
+Documentation is avaible [here](http://www.mandrake.teamturkeys.com/Mandrake.html).
 
 ##Author
 **Matteo Basso**
