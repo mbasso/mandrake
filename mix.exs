@@ -13,7 +13,7 @@ defmodule Mandrake.Mixfile do
      name: "Mandrake",
      docs: [source_ref: "v#{@version}", main: "Mandrake", logo: "logo.png"],
      source_url: "https://github.com/mbasso/mandrake",
-     package: [mantainers: ["Matteo Basso"], licenses: ["MIT"], links: %{"GitHub" => "https://github.com/mbasso/mandrake", "Docs" => "http://hexdocs.pm/mandrake" } ],
+     package: [maintainers: ["Matteo Basso"], licenses: ["MIT"], links: %{"GitHub" => "https://github.com/mbasso/mandrake", "Docs" => "http://hexdocs.pm/mandrake" } ],
      description: """
      Mandrake is a functional programming library that bring something else magic in elixir.
      """]
