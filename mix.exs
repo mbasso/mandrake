@@ -11,8 +11,9 @@ defmodule Mandrake.Mixfile do
      start_permanent: Mix.env == :prod,
      deps: deps,
      name: "Mandrake",
-     docs: [source_ref: "v#{@version}", main: "Mandrake", logo: "logo.png"],
+     docs: [source_ref: "v#{@version}", main: "api-reference", logo: "logo.png"],
      source_url: "https://github.com/mbasso/mandrake",
+     homepage_url: "https://github.com/mbasso/mandrake",
      package: [maintainers: ["Matteo Basso"], licenses: ["MIT"], links: %{"GitHub" => "https://github.com/mbasso/mandrake", "Docs" => "http://hexdocs.pm/mandrake" } ],
      description: """
      Mandrake is a functional programming library that bring something else magic in elixir.

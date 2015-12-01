@@ -12,10 +12,3 @@ script:
 after_script:
   - mix deps.get --only docs
   - MIX_ENV=docs mix inch.report
-
-#mix hex.user register
-#mix hex.publish
-
-#mix hex.publish --revert VERSION
-
-#mix hex.docs

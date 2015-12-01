@@ -22,7 +22,7 @@
   </button>
 
   
-  <a href="Mandrake.html" class="sidebar-projectLink">
+  <a href="api-reference.html" class="sidebar-projectLink">
     <div class="sidebar-projectDetails">
       <h1 class="sidebar-projectName">
         Mandrake
@@ -68,7 +68,7 @@
         Mandrake.DateTime
         
         
-          <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1229" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1229" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -143,11 +143,8 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#format/1">format(divider)</a>
+    <a href="#format/1">format(arg)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Returns a function for date or time formatting</p>
-</div>
   
 </div>
 <div class="summary-row">
@@ -165,6 +162,15 @@
   </div>
   
     <div class="summary-synopsis"><p>Format date/time with the given pattern and list using :io_lib.format</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#format_with_divider/1">format_with_divider(divider)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a function for date or time formatting</p>
 </div>
   
 </div>
@@ -286,7 +292,7 @@
     </a>
     <span class="signature">add_date(time)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1468" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1468" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -307,7 +313,7 @@
     </a>
     <span class="signature">add_time(date)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1481" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1481" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -328,7 +334,7 @@
     </a>
     <span class="signature">dd_mm_yyyy(arg, divider)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1270" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1270" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -349,7 +355,7 @@
     </a>
     <span class="signature">extract_date(arg)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1390" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1390" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -370,7 +376,7 @@
     </a>
     <span class="signature">extract_time(arg)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1403" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1403" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -389,21 +395,16 @@
     <a href="#format/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">format(divider)</span>
+    <span class="signature">format(arg)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1257" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1257" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns a function for date or time formatting.</p>
-<h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt;  formatWithSlash = Mandrake.DateTime.format(&quot;/&quot;)
-...&gt;  formatWithSlash.({{2015,12,31}, {10,30,15}})
-&quot;2015/12/31 10:30:15&quot;</code></pre>
-
+    
   </section>
 </div>
 <div class="detail" id="format/2">
@@ -413,7 +414,7 @@
     </a>
     <span class="signature">format(arg, divider)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1249" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1249" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -438,7 +439,7 @@ iex&gt;  Mandrake.DateTime.format({10,30,15})
     </a>
     <span class="signature">format_date_time(pattern, list)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1297" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1297" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -452,6 +453,28 @@ iex&gt;  Mandrake.DateTime.format({10,30,15})
 
   </section>
 </div>
+<div class="detail" id="format_with_divider/1">
+  <div class="detail-header">
+    <a href="#format_with_divider/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">format_with_divider(divider)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1284" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a function for date or time formatting.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  formatWithSlash = Mandrake.DateTime.format_with_divider(&quot;/&quot;)
+...&gt;  formatWithSlash.({{2015,12,31}, {10,30,15}})
+&quot;2015/12/31 10:30:15&quot;</code></pre>
+
+  </section>
+</div>
 <div class="detail" id="get/0">
   <div class="detail-header">
     <a href="#get/0" class="detail-link" title="Link to this function">
@@ -459,7 +482,7 @@ iex&gt;  Mandrake.DateTime.format({10,30,15})
     </a>
     <span class="signature">get()</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1312" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1312" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -480,7 +503,7 @@ iex&gt;  Mandrake.DateTime.format({10,30,15})
     </a>
     <span class="signature">get_date()</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1338" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1338" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -501,7 +524,7 @@ iex&gt;  Mandrake.DateTime.format({10,30,15})
     </a>
     <span class="signature">get_local()</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1325" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1325" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -522,7 +545,7 @@ iex&gt;  Mandrake.DateTime.format({10,30,15})
     </a>
     <span class="signature">get_local_date()</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1351" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1351" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -543,7 +566,7 @@ iex&gt;  Mandrake.DateTime.format({10,30,15})
     </a>
     <span class="signature">get_local_time()</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1377" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1377" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -564,7 +587,7 @@ iex&gt;  Mandrake.DateTime.format({10,30,15})
     </a>
     <span class="signature">get_time()</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1364" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1364" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -585,7 +608,7 @@ iex&gt;  Mandrake.DateTime.format({10,30,15})
     </a>
     <span class="signature">is_future(date_1, date_2)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1455" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1455" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -606,7 +629,7 @@ false</code></pre>
     </a>
     <span class="signature">is_past(date_1, date_2)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1442" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1442" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -627,7 +650,7 @@ true</code></pre>
     </a>
     <span class="signature">offset(date_1, date_2)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1416" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1416" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -648,7 +671,7 @@ true</code></pre>
     </a>
     <span class="signature">seconds_to_date_time(seconds)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1429" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.1/lib/mandrake.ex#L1429" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

@@ -1276,12 +1276,12 @@ defmodule Mandrake do
 
     ## Examples
 
-        iex>  formatWithSlash = Mandrake.DateTime.format("/")
+        iex>  formatWithSlash = Mandrake.DateTime.format_with_divider("/")
         ...>  formatWithSlash.({{2015,12,31}, {10,30,15}})
         "2015/12/31 10:30:15"
 
     """
-    def format(divider) do
+    def format_with_divider(divider) do
       fn date_time -> format(date_time, divider) end
     end
 
