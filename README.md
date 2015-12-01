@@ -2,6 +2,8 @@
 > ### Facility, Prosperity and Maintainability.
 > A functional programming library that bring something else magic in elixir.
 
+[![Inline docs](http://inch-ci.org/github/mbasso/mandrake.svg)](http://inch-ci.org/github/mbasso/mandrake)
+
 ### What is a Mandrake?
 
 - Element: Fire
