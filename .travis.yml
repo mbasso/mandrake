@@ -1,0 +1,21 @@
+language: elixir
+elixir: 1.1.1
+services:
+  - redis-server
+otp_release:
+  - 18.0
+sudo: false
+before_script:
+  - mix deps.get --only test
+script:
+  - mix test
+after_script:
+  - mix deps.get --only docs
+  - MIX_ENV=docs mix inch.report
+
+#mix hex.user register
+#mix hex.publish
+
+#mix hex.publish --revert VERSION
+
+#mix hex.docs
