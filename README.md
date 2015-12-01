@@ -1,7 +1,7 @@
 # Mandrake
+> ### Facility, Prosperity and Maintainability.
+> A functional programming library that bring something else magic in elixir.
 
-Mandrake is a functional programming library that bring something else magic in elixir. Facility, prosperity and maintainability are Mandrake characteristics. Mandrake contains mathematical, logical, relational and functional API that helps developers in their daily work.
-  
 ### What is a Mandrake?
 
 - Element: Fire
@@ -17,7 +17,7 @@ A whole Mandrake root placed in the home, will give the house protection, fertil
 Source: http://monsters.monstrous.com/mandrake.htm
 
 ##Documentation
-Documentation is avaible [here](http://www.mandrake.teamturkeys.com/Mandrake.html).
+API documentation is available at [http://www.mandrake.teamturkeys.com](http://www.mandrake.teamturkeys.com/Mandrake.html).
 
 ##Author
 **Matteo Basso**
@@ -25,7 +25,7 @@ Documentation is avaible [here](http://www.mandrake.teamturkeys.com/Mandrake.htm
 - [mbasso96@gmail.com](mailto:mbasso96@gmail.com)
 - [@Teo_Basso](https://twitter.com/Teo_Basso)
 
-##License
+##Copyright and License
 The MIT License (MIT)
 
 Copyright (c) 2015 Matteo Basso
