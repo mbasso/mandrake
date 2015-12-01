@@ -1,0 +1,690 @@
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mandrake.DateTime – Mandrake v0.0.1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.11.1">
+    <link rel="stylesheet" href="dist/app-6bc9434c82.css" />
+    <script src="dist/sidebar_items.js"></script>
+  </head>
+  <body data-type="modules">
+
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
+
+  
+  <a href="Mandrake.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Mandrake
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.0.1
+      </h2>
+    </div>
+    
+      <img src="assets/logo.png" alt="Mandrake" class="sidebar-projectImage">
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">Mandrake v0.0.1</small>
+        Mandrake.DateTime
+        
+        
+          <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1229" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
+      </h1>
+
+      
+        <section id="moduledoc" class="docstring">
+          <p>Mandrake functions for date and time.</p>
+
+        </section>
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#add_date/1">add_date(time)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Add date to time</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#add_time/1">add_time(date)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Add time to date</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#dd_mm_yyyy/2">dd_mm_yyyy(arg, divider)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Format date to dd mm yyyy with the given divider</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#extract_date/1">extract_date(arg)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Extract date to date_time</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#extract_time/1">extract_time(arg)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Extract time to date_time</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#format/1">format(divider)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a function for date or time formatting</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#format/2">format(arg, divider)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Format date, time or date_time with the given divider</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#format_date_time/2">format_date_time(pattern, list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Format date/time with the given pattern and list using :io_lib.format</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get/0">get()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get current date and time</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_date/0">get_date()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get current date</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_local/0">get_local()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get current local date and time</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_local_date/0">get_local_date()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get current local date</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_local_time/0">get_local_time()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get current local time</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_time/0">get_time()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get current time</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#is_future/2">is_future(date_1, date_2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns true if first date_time is &lt; than second</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#is_past/2">is_past(date_1, date_2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns true if first date_time is &gt; than second</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#offset/2">offset(date_1, date_2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the difference in seconds beetween two date_time elements (date_2 - date_1)</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#seconds_to_date_time/1">seconds_to_date_time(seconds)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns days and time correspondig given seconds</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+          
+
+        </section>
+      
+
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="add_date/1">
+  <div class="detail-header">
+    <a href="#add_date/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">add_date(time)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1468" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Add date to time.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.add_date({15, 34, 18})
+{{2015, 11, 29}, {15, 34, 18}}</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="add_time/1">
+  <div class="detail-header">
+    <a href="#add_time/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">add_time(date)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1481" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Add time to date.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.add_time({2015, 11, 29})
+{{2015, 11, 29}, {0, 0, 0}}</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="dd_mm_yyyy/2">
+  <div class="detail-header">
+    <a href="#dd_mm_yyyy/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">dd_mm_yyyy(arg, divider)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1270" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Format date to dd mm yyyy with the given divider.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.dd_mm_yyyy({2015,12,31}, &quot;/&quot;)
+&quot;31/12/2015&quot;</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="extract_date/1">
+  <div class="detail-header">
+    <a href="#extract_date/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">extract_date(arg)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1390" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Extract date to date_time.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.extract_date({{2015, 11, 29}, {15, 34, 18}})
+{2015, 11, 29}</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="extract_time/1">
+  <div class="detail-header">
+    <a href="#extract_time/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">extract_time(arg)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1403" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Extract time to date_time.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.extract_time({{2015, 11, 29}, {15, 34, 18}})
+{15, 34, 18}</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="format/1">
+  <div class="detail-header">
+    <a href="#format/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">format(divider)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1257" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a function for date or time formatting.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  formatWithSlash = Mandrake.DateTime.format(&quot;/&quot;)
+...&gt;  formatWithSlash.({{2015,12,31}, {10,30,15}})
+&quot;2015/12/31 10:30:15&quot;</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="format/2">
+  <div class="detail-header">
+    <a href="#format/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">format(arg, divider)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1249" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Format date, time or date_time with the given divider.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.format({{2015,12,31}, {10,30,15}}, &quot;/&quot;)
+&quot;2015/12/31 10:30:15&quot;
+iex&gt;  Mandrake.DateTime.format({2015,12,31}, &quot;/&quot;)
+&quot;2015/12/31&quot;
+iex&gt;  Mandrake.DateTime.format({10,30,15})
+&quot;10:30:15&quot;</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="format_date_time/2">
+  <div class="detail-header">
+    <a href="#format_date_time/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">format_date_time(pattern, list)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1297" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Format date/time with the given pattern and list using :io_lib.format.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.format_date_time(&quot;~2..0B:~2..0B:~2..0B&quot;, [10 ,30 ,15 ])
+&quot;10:30:15&quot;</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="get/0">
+  <div class="detail-header">
+    <a href="#get/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get()</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1312" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Get current date and time.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.get()
+{{2015, 11, 29}, {15, 34, 18}}</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="get_date/0">
+  <div class="detail-header">
+    <a href="#get_date/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_date()</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1338" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Get current date.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.get_date()
+{2015, 11, 29}</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="get_local/0">
+  <div class="detail-header">
+    <a href="#get_local/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_local()</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1325" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Get current local date and time.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.get_local()
+{{2015, 11, 29}, {15, 34, 18}}</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="get_local_date/0">
+  <div class="detail-header">
+    <a href="#get_local_date/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_local_date()</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1351" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Get current local date.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.get_local_date()
+{2015, 11, 29}</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="get_local_time/0">
+  <div class="detail-header">
+    <a href="#get_local_time/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_local_time()</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1377" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Get current local time.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.get_local_time()
+{15, 34, 18}</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="get_time/0">
+  <div class="detail-header">
+    <a href="#get_time/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_time()</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1364" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Get current time.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.get_time()
+{15, 34, 18}</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="is_future/2">
+  <div class="detail-header">
+    <a href="#is_future/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">is_future(date_1, date_2)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1455" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns true if first date_time is &lt; than second.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.is_future({{2015, 11, 29}, {15, 34, 18}}, {{2015, 11, 28}, {15, 34, 18}})
+false</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="is_past/2">
+  <div class="detail-header">
+    <a href="#is_past/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">is_past(date_1, date_2)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1442" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns true if first date_time is &gt; than second.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.is_past({{2015, 11, 29}, {15, 34, 18}}, {{2015, 11, 28}, {15, 34, 18}})
+true</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="offset/2">
+  <div class="detail-header">
+    <a href="#offset/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">offset(date_1, date_2)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1416" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns the difference in seconds beetween two date_time elements (date_2 - date_1).</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.offset({{2015, 11, 29}, {15, 34, 18}}, {{2015, 11, 30}, {15, 34, 18}})
+86400</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="seconds_to_date_time/1">
+  <div class="detail-header">
+    <a href="#seconds_to_date_time/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">seconds_to_date_time(seconds)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1429" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns days and time correspondig given seconds.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.seconds_to_date_time(86400)
+{1, {0, 0, 0}}</code></pre>
+
+  </section>
+</div>
+
+        </section>
+      
+
+      
+
+      
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.1),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-c7aad77d7d.js"></script>
+  </body>
+</html>
+

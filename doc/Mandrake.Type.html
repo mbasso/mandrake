@@ -1,0 +1,545 @@
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mandrake.Type – Mandrake v0.0.1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.11.1">
+    <link rel="stylesheet" href="dist/app-6bc9434c82.css" />
+    <script src="dist/sidebar_items.js"></script>
+  </head>
+  <body data-type="modules">
+
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
+
+  
+  <a href="Mandrake.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Mandrake
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.0.1
+      </h2>
+    </div>
+    
+      <img src="assets/logo.png" alt="Mandrake" class="sidebar-projectImage">
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">Mandrake v0.0.1</small>
+        Mandrake.Type
+        
+        
+          <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L926" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
+      </h1>
+
+      
+        <section id="moduledoc" class="docstring">
+          <p>Mandrake functions for types.</p>
+
+        </section>
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#assign/2">assign(first_tuple, second_tuple)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the extension of the tuple with the second</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#bool_false/0">bool_false()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Always return false</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#bool_true/0">bool_true()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Always return true</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#clone/1">clone(object)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Create a copy of a value</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#exists/1">exists(value)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns true if value is not nil</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#falsy/1">falsy(value)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns true if value is nil or false</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#is_nil/1">is_nil(value)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns true if value is nil</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#split/1">split(pattern)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a function that split a string with the given pattern</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#test/1">test(regex)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a function that test the given regex</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#test/2">test(regex, string)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a boolean indicating whether there was a match or not</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#trim/1">trim(string)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Removes whitespace at the beginning and at the end of the string</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#truthy/1">truthy(value)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns true if value is not nil or false</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#type_of/1">type_of(value)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns type of value</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+          
+
+        </section>
+      
+
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="assign/2">
+  <div class="detail-header">
+    <a href="#assign/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">assign(first_tuple, second_tuple)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L942" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns the extension of the tuple with the second.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Type.assign({ &quot;prop1&quot;, &quot;prop2&quot; }, { &quot;prop3&quot; })
+{ &quot;prop1&quot;, &quot;prop2&quot;, &quot;prop3&quot; }</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="bool_false/0">
+  <div class="detail-header">
+    <a href="#bool_false/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">bool_false()</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L981" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Always return false.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Type.bool_false()
+false</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="bool_true/0">
+  <div class="detail-header">
+    <a href="#bool_true/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">bool_true()</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L968" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Always return true.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Type.bool_true()
+true</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="clone/1">
+  <div class="detail-header">
+    <a href="#clone/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">clone(object)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L955" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Create a copy of a value.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Type.clone([1, 2, 3, 4, 5])
+[1, 2, 3, 4, 5]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="exists/1">
+  <div class="detail-header">
+    <a href="#exists/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">exists(value)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1109" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns true if value is not nil.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Type.exists(&quot;Example&quot;)
+true
+iex&gt;  Mandrake.Type.exists(nil)
+false</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="falsy/1">
+  <div class="detail-header">
+    <a href="#falsy/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">falsy(value)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1139" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns true if value is nil or false.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Type.falsy(&quot;Example&quot;)
+false
+iex&gt;  Mandrake.Type.falsy(nil)
+true</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="is_nil/1">
+  <div class="detail-header">
+    <a href="#is_nil/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">is_nil(value)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L996" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns true if value is nil.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Type.is_nil([])
+false
+iex&gt;  Mandrake.Type.is_nil(nil)
+true</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="split/1">
+  <div class="detail-header">
+    <a href="#split/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">split(pattern)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1094" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a function that split a string with the given pattern.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  splitComma = Mandrake.Type.split(&quot;,&quot;)
+...&gt;  splitComma.(&quot;a,b,c&quot;)
+[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="test/1">
+  <div class="detail-header">
+    <a href="#test/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">test(regex)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1080" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a function that test the given regex.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  testFoo = Mandrake.Type.test(~r/foo/)
+...&gt;  testFoo.(&quot;bar&quot;)
+false</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="test/2">
+  <div class="detail-header">
+    <a href="#test/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">test(regex, string)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1066" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a boolean indicating whether there was a match or not.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Type.test(~r/foo/, &quot;foo&quot;)
+true</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="trim/1">
+  <div class="detail-header">
+    <a href="#trim/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">trim(string)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1053" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Removes whitespace at the beginning and at the end of the string.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Type.trim(&quot;   Example   &quot;)
+&quot;Example&quot;</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="truthy/1">
+  <div class="detail-header">
+    <a href="#truthy/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">truthy(value)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1124" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns true if value is not nil or false.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Type.truthy(&quot;Example&quot;)
+true
+iex&gt;  Mandrake.Type.truthy(nil)
+false</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="type_of/1">
+  <div class="detail-header">
+    <a href="#type_of/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">type_of(value)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L1009" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns type of value.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Type.type_of(42.0)
+Float</code></pre>
+
+  </section>
+</div>
+
+        </section>
+      
+
+      
+
+      
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.1),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-c7aad77d7d.js"></script>
+  </body>
+</html>
+

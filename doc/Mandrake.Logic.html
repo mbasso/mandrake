@@ -1,0 +1,398 @@
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mandrake.Logic – Mandrake v0.0.1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.11.1">
+    <link rel="stylesheet" href="dist/app-6bc9434c82.css" />
+    <script src="dist/sidebar_items.js"></script>
+  </head>
+  <body data-type="modules">
+
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
+
+  
+  <a href="Mandrake.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Mandrake
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.0.1
+      </h2>
+    </div>
+    
+      <img src="assets/logo.png" alt="Mandrake" class="sidebar-projectImage">
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">Mandrake v0.0.1</small>
+        Mandrake.Logic
+        
+        
+          <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L374" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
+      </h1>
+
+      
+        <section id="moduledoc" class="docstring">
+          <p>Mandrake logical functions.</p>
+
+        </section>
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#both/2">both(first_func, second_func)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns true if both functions return true</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#default_to/1">default_to(value)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the second argument if it is not nil</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#either/2">either(first_func, second_func)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns true if one function return true</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#ifElse/3">ifElse(condition, onTrue, onFalse)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a function that process onTrue or onFalse depending upon the result of the condition</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#is_empty/1">is_empty(value)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns true if value is “”, ‘’, [], {} or %{}</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#logic_and/2">logic_and(first_cond, second_cond)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns true if both conditions are true</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#logic_not/1">logic_not(value)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns ! of value</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#logic_or/2">logic_or(first_cond, second_cond)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns true if one condition is true</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+          
+
+        </section>
+      
+
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="both/2">
+  <div class="detail-header">
+    <a href="#both/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">both(first_func, second_func)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L408" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns true if both functions return true</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  my_function = Mandrake.Logic.both(fn x -&gt; x &gt; 10 end, fn x -&gt; Kernel.rem(x, 2) == 0 end)
+...&gt;  my_function.(100)
+true
+iex&gt;  my_function.(101)
+false</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="default_to/1">
+  <div class="detail-header">
+    <a href="#default_to/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">default_to(value)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L498" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns the second argument if it is not nil.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  default_to_7 = Mandrake.Logic.default_to(7)
+...&gt;  default_to_7.(nil)
+7
+iex&gt;  default_to_7.(12)
+12</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="either/2">
+  <div class="detail-header">
+    <a href="#either/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">either(first_func, second_func)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L424" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns true if one function return true</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  my_function = Mandrake.Logic.either(fn x -&gt; x &gt; 10 end, fn x -&gt; Kernel.rem(x, 2) == 0 end)
+...&gt;  my_function.(100)
+true
+iex&gt;  my_function.(101)
+true</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="ifElse/3">
+  <div class="detail-header">
+    <a href="#ifElse/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">ifElse(condition, onTrue, onFalse)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L392" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a function that process onTrue or onFalse depending upon the result of the condition.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  my_number = 1
+...&gt;  my_function = Mandrake.Logic.ifElse(my_number &lt;= 1, fn arg -&gt; Mandrake.Math.inc(arg) end, fn arg -&gt; Mandrake.Math.dec(arg) end)
+...&gt;  my_function.(my_number)
+2</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="is_empty/1">
+  <div class="detail-header">
+    <a href="#is_empty/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">is_empty(value)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L439" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns true if value is “”, ‘’, [], {} or %{}.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Logic.is_empty([])
+true
+iex&gt;  Mandrake.Logic.is_empty(nil)
+false</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="logic_and/2">
+  <div class="detail-header">
+    <a href="#logic_and/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">logic_and(first_cond, second_cond)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L456" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns true if both conditions are true.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Logic.logic_and(1&lt;2, 3&gt;4)
+false</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="logic_not/1">
+  <div class="detail-header">
+    <a href="#logic_not/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">logic_not(value)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L482" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns ! of value</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Logic.logic_not(false)
+true</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="logic_or/2">
+  <div class="detail-header">
+    <a href="#logic_or/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">logic_or(first_cond, second_cond)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L469" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns true if one condition is true.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Logic.logic_or(1&lt;2, 3&gt;4)
+true</code></pre>
+
+  </section>
+</div>
+
+        </section>
+      
+
+      
+
+      
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.1),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-c7aad77d7d.js"></script>
+  </body>
+</html>
+

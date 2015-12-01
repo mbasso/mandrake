@@ -1,0 +1,721 @@
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mandrake.Math – Mandrake v0.0.1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.11.1">
+    <link rel="stylesheet" href="dist/app-6bc9434c82.css" />
+    <script src="dist/sidebar_items.js"></script>
+  </head>
+  <body data-type="modules">
+
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
+
+  
+  <a href="Mandrake.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Mandrake
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.0.1
+      </h2>
+    </div>
+    
+      <img src="assets/logo.png" alt="Mandrake" class="sidebar-projectImage">
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">Mandrake v0.0.1</small>
+        Mandrake.Math
+        
+        
+          <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L24" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
+      </h1>
+
+      
+        <section id="moduledoc" class="docstring">
+          <p>Mandrake mathematical functions.</p>
+
+        </section>
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#abs/1">abs(list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Calculates the absolute value of each number in a list</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#add/1">add(number)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a function that adds a number to the first</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#add/2">add(first_number, second_number)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Adds two numbers</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#dec/1">dec(number)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Decrease a number by 1</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#divide/1">divide(number)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a function that divides a number to the first</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#divide/2">divide(first_number, second_number)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Divides two numbers</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#inc/1">inc(number)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Increase a number by 1</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#max/1">max(list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns max value in a list</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#mean/1">mean(list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Calculates the mean of a list of numbers</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#median/1">median(list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Calculates the median of a list of numbers</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#min/1">min(list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns min value in a list</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#modulo/2">modulo(first_number, second_number)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns modulus of two numbers</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#multiply/1">multiply(number)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a function that multiplies a number to the first</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#multiply/2">multiply(first_number, second_number)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Multiplies two numbers</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#negate/1">negate(number)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Negate a number</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#product/1">product(list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Calculates the product of a list of numbers</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#subtract/1">subtract(number)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a function that subtracts a number to the first</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#subtract/2">subtract(first_number, second_number)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Subtracts two numbers</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#sum/1">sum(list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Calculates the sum of a list of numbers</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+          
+
+        </section>
+      
+
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="abs/1">
+  <div class="detail-header">
+    <a href="#abs/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">abs(list)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L87" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Calculates the absolute value of each number in a list.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Math.abs([-1, 2, -3, -4, -5])
+[1, 2, 3, 4, 5]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="add/1">
+  <div class="detail-header">
+    <a href="#add/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">add(number)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L152" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a function that adds a number to the first.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  add2 = Mandrake.Math.add(2)
+...&gt;  add2.(5)
+7</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="add/2">
+  <div class="detail-header">
+    <a href="#add/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">add(first_number, second_number)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L138" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Adds two numbers.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Math.add(5, 2)
+7</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="dec/1">
+  <div class="detail-header">
+    <a href="#dec/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">dec(number)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L192" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Decrease a number by 1.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Math.dec(7)
+6</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="divide/1">
+  <div class="detail-header">
+    <a href="#divide/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">divide(number)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L232" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a function that divides a number to the first.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  divide2 = Mandrake.Math.divide(2)
+...&gt;  divide2.(5)
+0.4</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="divide/2">
+  <div class="detail-header">
+    <a href="#divide/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">divide(first_number, second_number)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L218" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Divides two numbers.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Math.divide(5, 2)
+2.5</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="inc/1">
+  <div class="detail-header">
+    <a href="#inc/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">inc(number)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L205" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Increase a number by 1.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Math.inc(7)
+8</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="max/1">
+  <div class="detail-header">
+    <a href="#max/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">max(list)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L104" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns max value in a list.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Math.max([1, 243, 3, 4, 5])
+243</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="mean/1">
+  <div class="detail-header">
+    <a href="#mean/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">mean(list)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L57" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Calculates the mean of a list of numbers.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Mandrake.Math.mean([1, 2, 3, 4, 5])
+3.0</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="median/1">
+  <div class="detail-header">
+    <a href="#median/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">median(list)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L300" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Calculates the median of a list of numbers.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Mandrake.Math.median([7, 2, 10, 9, 6])
+7
+iex&gt; Mandrake.Math.median([7, 2, 10, 9, 6, 8])
+7.5</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="min/1">
+  <div class="detail-header">
+    <a href="#min/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">min(list)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L121" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns min value in a list.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Math.min([1, 243, 3, 4, 5])
+1</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="modulo/2">
+  <div class="detail-header">
+    <a href="#modulo/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">modulo(first_number, second_number)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L272" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns modulus of two numbers.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Math.modulo(20, 5)
+0</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="multiply/1">
+  <div class="detail-header">
+    <a href="#multiply/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">multiply(number)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L259" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a function that multiplies a number to the first.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  multiply2 = Mandrake.Math.multiply(2)
+...&gt;  multiply2.(5)
+10</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="multiply/2">
+  <div class="detail-header">
+    <a href="#multiply/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">multiply(first_number, second_number)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L245" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Multiplies two numbers.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Math.multiply(5, 2)
+10</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="negate/1">
+  <div class="detail-header">
+    <a href="#negate/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">negate(number)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L285" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Negate a number.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Math.negate(7)
+-7</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="product/1">
+  <div class="detail-header">
+    <a href="#product/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">product(list)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L70" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Calculates the product of a list of numbers.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Mandrake.Math.product([1, 2, 3, 4, 5])
+120</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="subtract/1">
+  <div class="detail-header">
+    <a href="#subtract/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">subtract(number)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L179" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a function that subtracts a number to the first.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  subtract2 = Mandrake.Math.subtract(2)
+...&gt;  subtract2.(5)
+-3</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="subtract/2">
+  <div class="detail-header">
+    <a href="#subtract/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">subtract(first_number, second_number)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L165" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Subtracts two numbers.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Math.subtract(5, 2)
+3</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="sum/1">
+  <div class="detail-header">
+    <a href="#sum/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">sum(list)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v/lib/mandrake.ex#L40" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Calculates the sum of a list of numbers.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Mandrake.Math.sum([1, 2, 3, 4, 5])
+15</code></pre>
+
+  </section>
+</div>
+
+        </section>
+      
+
+      
+
+      
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.1),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-c7aad77d7d.js"></script>
+  </body>
+</html>
+
