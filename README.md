@@ -2,6 +2,7 @@
 > ### Facility, Prosperity and Maintainability.
 > A functional programming library that bring something else magic in elixir.
 
+[![Build Status](https://api.travis-ci.org/mbasso/mandrake.svg)](https://travis-ci.org/mbasso/mandrake)
 [![Inline docs](http://inch-ci.org/github/mbasso/mandrake.svg)](http://inch-ci.org/github/mbasso/mandrake)
 
 ### What is a Mandrake?
