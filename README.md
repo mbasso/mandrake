@@ -4,6 +4,7 @@
 
 [![Build Status](https://api.travis-ci.org/mbasso/mandrake.svg)](https://travis-ci.org/mbasso/mandrake)
 [![Inline docs](http://inch-ci.org/github/mbasso/mandrake.svg)](http://inch-ci.org/github/mbasso/mandrake)
+[![Package](https://img.shields.io/hexpm/v/mandrake.svg)](https://hex.pm/packages/mandrake)
 
 ### What is a Mandrake?
 
@@ -20,7 +21,23 @@ A whole Mandrake root placed in the home, will give the house protection, fertil
 Source: http://monsters.monstrous.com/mandrake.htm
 
 ##Documentation
-API documentation is available at [http://www.mandrake.teamturkeys.com](http://www.mandrake.teamturkeys.com/Mandrake.html).
+API documentation is available at [http://hexdocs.pm/mandrake](http://hexdocs.pm/mandrake).
+
+## Installation
+
+The package can be installed from hex as:
+
+  1. Add mandrake to your list of dependencies in `mix.exs`:
+
+        def deps do
+          [{:Mandrake, "~> 0.0.1"}]
+        end
+
+  2. Ensure mandrake is started before your application:
+
+        def application do
+          [applications: [:Mandrake]]
+        end
 
 ##Author
 **Matteo Basso**
