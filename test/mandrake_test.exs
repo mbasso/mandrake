@@ -1,5 +1,3 @@
-ExUnit.start()
-
 defmodule MandrakeTest do
   use ExUnit.Case, async: true
   doctest Mandrake
@@ -9,6 +7,7 @@ defmodule MandrakeTest do
   doctest Mandrake.List
   doctest Mandrake.Relation
   doctest Mandrake.Type
+  doctest Mandrake.Validation
   #doctest Mandrake.DateTime
   doctest Mandrake.Annotation
 end

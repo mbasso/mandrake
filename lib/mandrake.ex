@@ -316,6 +316,34 @@ defmodule Mandrake do
     """
 
     @doc """
+    Returns an anonymous function that wrap the given.
+
+    ## Examples
+
+        iex>  mod = Mandrake.Function.lambda("Mandrake.Math.modulo", 2)
+        ...>  mod.(20, 5)
+        0
+        
+    """
+    def lambda(function, arity) do
+        args = cond do
+            arity == 0 -> ""
+            arity == 1 -> "arg"
+            arity > 1 -> nil
+        end
+        if is_nil(args) do args = build_args("arg" <> to_string(arity), arity-1) end
+        List.first(Tuple.to_list(Code.eval_string("fn " <> args <> " -> " <> function <> "(" <> args <> ") end")))
+    end
+
+    def build_args(string, remaining) do
+        if remaining == 0 do
+            string
+        else
+            build_args(string <> ", arg" <> to_string(remaining), remaining-1)
+        end
+    end
+
+    @doc """
     Call the given function with the given object.
 
     ## Examples
@@ -391,6 +419,21 @@ defmodule Mandrake do
     """
     def ifElse(condition, onTrue, onFalse) do
       fn arg -> if condition do onTrue.(arg) else onFalse.(arg) end end
+    end
+
+    @doc """
+    Returns a function that process onTrue if condition is true.
+
+    ## Examples
+
+        iex>  my_number = 1
+        ...>  my_function = Mandrake.Logic.logic_if(my_number <= 1, fn arg -> Mandrake.Math.inc(arg) end)
+        ...>  my_function.(my_number)
+        2
+
+    """
+    def logic_if(condition, onTrue) do
+      fn arg -> if condition do onTrue.(arg) end end
     end
 
     @doc """
@@ -513,6 +556,48 @@ defmodule Mandrake do
     Mandrake mathematical functions.
 
     """
+
+    @doc """
+    Returns a new list starting from the given value or nil.
+
+    ## Examples
+
+        iex>  Mandrake.List.from(43, [4, 7, 43, 6, 3, 7])
+        [43, 6, 3, 7]
+
+    """
+    def from(value, [head|tail]) do
+      if head == value do
+        [head|tail]
+      else
+        from(value, tail)
+      end
+    end
+
+    def from(value, []) do
+
+    end
+
+    @doc """
+    Returns true if all elements in a list are equal.
+
+    ## Examples
+
+        iex>  Mandrake.List.equals([7, 7, 7])
+        true
+
+    """
+    def equals([head|tail]) when (length tail) > 1 do
+      if head == Elixir.List.first(tail) do
+        equals(tail)
+      else
+        false
+      end
+    end
+
+    def equals([head|tail]) when (length tail) == 1 do
+      head == Elixir.List.first(tail)
+    end
 
     @doc """
     Returns a new list after appending the new element.
@@ -923,6 +1008,253 @@ defmodule Mandrake do
 
   end
 
+  defmodule Validation do
+
+    @moduledoc """
+    Mandrake validation functions.
+
+    """
+
+    @doc """
+    Returns a boolean indicating whether there was a match or not.
+
+    ## Examples
+
+        iex>  Mandrake.Validation.test(~r/foo/, "foo")
+        true
+
+    """
+    def test(regex, string) do
+      Regex.match?(regex, string)
+    end
+
+    @doc """
+    Returns a function that test the given regex.
+
+    ## Examples
+
+        iex>  testFoo = Mandrake.Validation.test(~r/foo/)
+        ...>  testFoo.("bar")
+        false
+
+    """
+    def test(regex) do
+      fn string -> Regex.match?(regex, string) end
+    end
+
+    @doc """
+    Returns always true.
+
+    ## Examples
+
+        iex>  Mandrake.Validation.anything("foo")
+        true
+
+    """
+    def anything(string) do
+      Regex.match?(~r/^.*$/, string)
+    end
+
+    @doc """
+    Returns true if the given value is a valid email.
+
+    ## Examples
+
+        iex>  Mandrake.Validation.email("foo@bar.com")
+        true
+
+    """
+    def email(string) do
+      Regex.match?(~r/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, string)
+    end
+
+    @doc """
+    Returns true if the given value is a valid amount.
+
+    ## Examples
+
+        iex>  Mandrake.Validation.amount("0")
+        true
+        iex>  Mandrake.Validation.amount("0.00")
+        true
+        iex>  Mandrake.Validation.amount("0,00")
+        true
+
+    """
+    def amount(string) do
+      Regex.match?(~r/(?:^\d{1,3}(?:\.?\d{3})*(?:,\d{2})?$)|(?:^\d{1,3}(?:,?\d{3})*(?:\.\d{2})?$)/, string)
+    end
+
+    @doc """
+    Returns true if the given value is a valid gender (m/M, f/F).
+
+    ## Examples
+
+        iex>  Mandrake.Validation.gender("m")
+        true
+
+    """
+    def gender(string) do
+      Regex.match?(~r/^[mfMF]$/, string)
+    end
+
+    @doc """
+    Returns true if the given value is a valid year.
+
+    ## Examples
+
+        iex>  Mandrake.Validation.year("2015")
+        true
+
+    """
+    def year(string) do
+      Regex.match?(~r/^\d{4}$/, string)
+    end
+
+    @doc """
+    Returns true if the given value is a valid number.
+
+    ## Examples
+
+        iex>  Mandrake.Validation.number("535")
+        true
+
+    """
+    def number(string) do
+      Regex.match?(~r/^\d+$/, string)
+    end
+
+    @doc """
+    Returns true if the given value is a valid name.
+
+    ## Examples
+
+        iex>  Mandrake.Validation.name("Matteo Basso")
+        true
+        iex>  Mandrake.Validation.name("Martin Luther King, Jr.")
+        true
+
+    """
+    def name(string) do
+      Regex.match?(~r/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u, string)
+    end
+
+    @doc """
+    Returns true if the given value is a valid phone number.
+
+    ## Examples
+
+        iex>  Mandrake.Validation.phone_number("(123) 456 7899")
+        true
+        iex>  Mandrake.Validation.phone_number("(123).456.7899")
+        true
+        iex>  Mandrake.Validation.phone_number("(123)-456-7899")
+        true
+        iex>  Mandrake.Validation.phone_number("123-456-7899")
+        true
+        iex>  Mandrake.Validation.phone_number("123 456 7899")
+        true
+        iex>  Mandrake.Validation.phone_number("1234567899")
+        true
+
+    """
+    def phone_number(string) do
+      Regex.match?(~r/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/, string)
+    end
+
+    @doc """
+    Returns true if the given value is a valid username (letters, numbers, underscores, hyphens, 3 < username_length < 18).
+
+    ## Examples
+
+        iex>  Mandrake.Validation.username("mbasso")
+        true
+
+    """
+    def username(string) do
+      Regex.match?(~r/^[a-z0-9_-]{3,16}$/, string)
+    end
+
+    @doc """
+    Returns true if the given value is a valid password (letters, numbers, underscores, hyphens, 6 < password_length < 18).
+
+    ## Examples
+
+        iex>  Mandrake.Validation.password("Examplepassword")
+        true
+
+    """
+    def password(string) do
+      Regex.match?(~r/^[a-zA-Z0-9_-]{6,18}$/, string)
+    end
+
+    @doc """
+    Returns true if the given value is a valid hex.
+
+    ## Examples
+
+        iex>  Mandrake.Validation.hex("#C0C0C0")
+        true
+
+    """
+    def hex(string) do
+      Regex.match?(~r/^#?([a-f0-9]{6}|[a-f0-9]{3}|[A-F0-9]{6}|[A-F0-9]{3})$/, string)
+    end
+
+    @doc """
+    Returns true if the given value is a valid slug.
+
+    ## Examples
+
+        iex>  Mandrake.Validation.slug("my-example-tytle")
+        true
+
+    """
+    def slug(string) do
+      Regex.match?(~r/^[a-z0-9-]+$/, string)
+    end
+
+    @doc """
+    Returns true if the given value is a valid url.
+
+    ## Examples
+
+        iex>  Mandrake.Validation.url("http://example.org/")
+        true
+
+    """
+    def url(string) do
+      Regex.match?(~r/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/, string)
+    end
+
+    @doc """
+    Returns true if the given value is a valid ip address.
+
+    ## Examples
+
+        iex>  Mandrake.Validation.ip_address("127.0.0.1")
+        true
+
+    """
+    def ip_address(string) do
+      Regex.match?(~r/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/, string)
+    end
+
+    @doc """
+    Returns true if the given value is a valid html tag.
+
+    ## Examples
+
+        iex>  Mandrake.Validation.html("<a href='https://example.org'>My example link</a>")
+        true
+
+    """
+    def html(string) do
+      Regex.match?(~r/^<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)$/, string)
+    end
+
+  end
+
   defmodule Type do
 
     @moduledoc """
@@ -1052,33 +1384,6 @@ defmodule Mandrake do
     """
     def trim(string) do
       String.strip(string)
-    end
-
-    @doc """
-    Returns a boolean indicating whether there was a match or not.
-
-    ## Examples
-
-        iex>  Mandrake.Type.test(~r/foo/, "foo")
-        true
-
-    """
-    def test(regex, string) do
-      Regex.match?(regex, string)
-    end
-
-    @doc """
-    Returns a function that test the given regex.
-
-    ## Examples
-
-        iex>  testFoo = Mandrake.Type.test(~r/foo/)
-        ...>  testFoo.("bar")
-        false
-
-    """
-    def test(regex) do
-      fn string -> Regex.match?(regex, string) end
     end
 
     @doc """
