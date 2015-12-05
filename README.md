@@ -42,7 +42,6 @@ The package can be installed from hex as:
 ##Author
 **Matteo Basso**
 - [github/mbasso](https://github.com/mbasso)
-- [mbasso96@gmail.com](mailto:mbasso96@gmail.com)
 - [@Teo_Basso](https://twitter.com/Teo_Basso)
 
 ##Copyright and License
