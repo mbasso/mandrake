@@ -1,4 +1,6 @@
 # Mandrake
+
+[![Join the chat at https://gitter.im/mbasso/mandrake](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mbasso/mandrake?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 > ### Facility, Prosperity and Maintainability.
 > A functional programming library that bring something else magic in elixir.
 
