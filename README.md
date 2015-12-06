@@ -5,6 +5,7 @@
 [![Build Status](https://api.travis-ci.org/mbasso/mandrake.svg)](https://travis-ci.org/mbasso/mandrake)
 [![Inline docs](http://inch-ci.org/github/mbasso/mandrake.svg)](http://inch-ci.org/github/mbasso/mandrake)
 [![Package](https://img.shields.io/hexpm/v/mandrake.svg)](https://hex.pm/packages/mandrake)
+[![Join the chat at https://gitter.im/mbasso/mandrake](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mbasso/mandrake?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ### What is a Mandrake?
 
@@ -30,13 +31,13 @@ The package can be installed from hex as:
   1. Add mandrake to your list of dependencies in `mix.exs`:
 
         def deps do
-          [{:Mandrake, "~> 0.0.1"}]
+          [{:mandrake, "~> 0.0.1"}]
         end
 
   2. Ensure mandrake is started before your application:
 
         def application do
-          [applications: [:Mandrake]]
+          [applications: [:mandrake]]
         end
 
 ##Author
