@@ -591,7 +591,7 @@ defmodule Mandrake do
   defmodule List do
 
     @moduledoc """
-    Mandrake mathematical functions.
+    Mandrake list manipulation functions.
 
     """
 
