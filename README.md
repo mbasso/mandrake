@@ -29,16 +29,18 @@ API documentation is available at [http://hexdocs.pm/mandrake](http://hexdocs.pm
 The package can be installed from hex as:
 
   1. Add mandrake to your list of dependencies in `mix.exs`:
-
-        def deps do
-          [{:mandrake, "~> 0.0.1"}]
-        end
+  ```elixir
+  def deps do
+    [{:mandrake, "~> 0.0.1"}]
+  end
+  ```
 
   2. Ensure mandrake is started before your application:
-
-        def application do
-          [applications: [:mandrake]]
-        end
+  ```elixir
+  def application do
+    [applications: [:mandrake]]
+  end
+  ```
 
 ##Author
 **Matteo Basso**
