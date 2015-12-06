@@ -31,13 +31,13 @@ The package can be installed from hex as:
   1. Add mandrake to your list of dependencies in `mix.exs`:
 
         def deps do
-          [{:Mandrake, "~> 0.0.1"}]
+          [{:mandrake, "~> 0.0.1"}]
         end
 
   2. Ensure mandrake is started before your application:
 
         def application do
-          [applications: [:Mandrake]]
+          [applications: [:mandrake]]
         end
 
 ##Author
