@@ -21,12 +21,24 @@ defmodule Mandrake do
 
   """
 
+  defmacro __using__(_opts) do
+    quote do
+        import Mandrake
+    end
+  end
+
   defmodule Math do
 
     @moduledoc """
     Mandrake mathematical functions.
 
     """
+
+    defmacro __using__(_opts) do
+      quote do
+        import Mandrake.Math
+      end
+    end
 
     @doc """
     Calculates the sum of a list of numbers.
@@ -315,6 +327,33 @@ defmodule Mandrake do
 
     """
 
+    defmacro __using__(_opts) do
+      quote do
+        import Mandrake.Function
+      end
+    end
+
+    def build_args(string, remaining) do
+        if remaining == 0 do
+            string
+        else
+            build_args(string <> ", arg" <> to_string(remaining), remaining-1)
+        end
+    end
+
+    @doc """
+    Apply the second argument to the function.
+
+    ## Examples
+
+        iex>  mod = Mandrake.Function.apply(fn arg -> -arg end, -2)
+        2
+        
+    """
+    def apply(function, value) do
+        function.(value)
+    end
+
     @doc """
     Returns an anonymous function that wrap the given.
 
@@ -333,15 +372,7 @@ defmodule Mandrake do
         end
         if is_nil(args) do args = build_args("arg" <> to_string(arity), arity-1) end
         List.first(Tuple.to_list(Code.eval_string("fn " <> args <> " -> " <> function <> "(" <> args <> ") end")))
-    end
-
-    def build_args(string, remaining) do
-        if remaining == 0 do
-            string
-        else
-            build_args(string <> ", arg" <> to_string(remaining), remaining-1)
-        end
-    end
+    end    
 
     @doc """
     Call the given function with the given object.
@@ -406,6 +437,26 @@ defmodule Mandrake do
 
     """
 
+    defmacro __using__(_opts) do
+      quote do
+        import Mandrake.Logic
+      end
+    end
+
+    @doc """
+    Returns a function that return !result of the given function.
+
+    ## Examples
+
+        iex>  is_odd = Mandrake.Logic.complement(fn arg -> Kernel.rem(arg, 2) == 0 end)
+        ...>  is_odd.(24)
+        false
+
+    """
+    def complement(function) do
+        fn arg -> logic_not(function.(arg)) end
+    end
+
     @doc """
     Returns a function that process onTrue or onFalse depending upon the result of the condition.
 
@@ -422,7 +473,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns a function that process onTrue if condition is true.
+    Returns a function that process on_true if condition is true.
 
     ## Examples
 
@@ -432,8 +483,8 @@ defmodule Mandrake do
         2
 
     """
-    def logic_if(condition, onTrue) do
-      fn arg -> if condition do onTrue.(arg) end end
+    def logic_if(condition, on_true) do
+      fn arg -> if condition do on_true.(arg) end end
     end
 
     @doc """
@@ -556,6 +607,29 @@ defmodule Mandrake do
     Mandrake mathematical functions.
 
     """
+
+    defmacro __using__(_opts) do
+      quote do
+        import Mandrake.List
+      end
+    end
+
+    @doc """
+    Returns a new list starting from the given value or nil.
+
+    ## Examples
+
+        iex>  Mandrake.List.reverse([4, 7, 43, 6, 3, 7])
+        [7, 3, 6, 43, 7, 4]
+
+    """
+    def reverse([head|tail]) do
+      reverse(tail) ++ [head]
+    end
+
+    def reverse([]) do
+      []
+    end
 
     @doc """
     Returns a new list starting from the given value or nil.
@@ -954,6 +1028,106 @@ defmodule Mandrake do
 
     """
 
+    defmacro __using__(_opts) do
+      quote do
+        import Mandrake.Relation
+      end
+    end
+
+    @doc """
+    Returns the larger of two arguments.
+
+    ## Examples
+
+        iex>  Mandrake.Relation.max('a', 'z')
+        'z'
+
+    """
+    def max(value_1, value_2) do
+      if value_1 > value_2 do 
+        value_1
+      else 
+        value_2 
+      end
+    end
+
+    @doc """
+    Returns the value that produces the larger result when passed to the provided function.
+
+    ## Examples
+
+        iex>  Mandrake.Relation.max_by(fn arg -> Mandrake.Math.negate(arg) end, -3, -6)
+        -6
+
+    """
+    def max_by(function, value_1, value_2) do
+      if function.(value_1) > function.(value_2) do 
+        value_1
+      else 
+        value_2 
+      end
+    end
+
+    @doc """
+    Returns the smaller of two arguments.
+
+    ## Examples
+
+        iex>  Mandrake.Relation.min('a', 'z')
+        'a'
+
+    """
+    def min(value_1, value_2) do
+      if value_1 < value_2 do 
+        value_1
+      else 
+        value_2 
+      end
+    end
+
+    @doc """
+    Returns the value that produces the smaller result when passed to the provided function.
+
+    ## Examples
+
+        iex>  Mandrake.Relation.min_by(fn arg -> Mandrake.Math.negate(arg) end, -3, -6)
+        -6
+
+    """
+    def min_by(function, value_1, value_2) do
+      if function.(value_1) > function.(value_2) do 
+        value_1
+      else 
+        value_2 
+      end
+    end
+
+    @doc """
+    Returns true if the values produce the same result when passed to the provided function.
+
+    ## Examples
+
+        iex>  Mandrake.Relation.equals_by(fn arg -> Mandrake.Math.abs(arg) end, [-3], [3])
+        true
+
+    """
+    def equals_by(function, value_1, value_2) do
+      function.(value_1) == function.(value_2)
+    end
+
+    @doc """
+    Returns true if the given values are equal.
+
+    ## Examples
+
+        iex>  Mandrake.Relation.equals('0', 0)
+        false
+
+    """
+    def equals(value_1, value_2) do
+      value_1 == value_2
+    end
+
     @doc """
     Returns true if first value is less than the second.
 
@@ -1014,6 +1188,12 @@ defmodule Mandrake do
     Mandrake validation functions.
 
     """
+
+    defmacro __using__(_opts) do
+      quote do
+        import Mandrake.Validation
+      end
+    end
 
     @doc """
     Returns a boolean indicating whether there was a match or not.
@@ -1262,6 +1442,12 @@ defmodule Mandrake do
 
     """
 
+    defmacro __using__(_opts) do
+      quote do
+        import Mandrake.Type
+      end
+    end
+
     @doc """
     Returns the extension of the tuple with the second.
 
@@ -1327,6 +1513,21 @@ defmodule Mandrake do
     """
     def is_nil(value) do
       value == nil
+    end
+
+    @doc """
+    Returns true if value is nil.
+    
+    ## Examples
+
+        iex>  Mandrake.Type.is(Integer, 5)
+        true
+        iex>  Mandrake.Type.is(List, 5)
+        false
+
+    """
+    def is(type, value) do
+      type == type_of(value)
     end
 
     @doc """
@@ -1454,6 +1655,12 @@ defmodule Mandrake do
 
     """
 
+    defmacro __using__(_opts) do
+      quote do
+        import Mandrake.Annotation
+      end
+    end
+
     @doc """
     Raise an exception if time for todo is over.
 
@@ -1538,8 +1745,14 @@ defmodule Mandrake do
 
     """
 
+    defmacro __using__(_opts) do
+      quote do
+        import Mandrake.DateTime
+      end
+    end
+
     @doc """
-    Format date, time or date_time with the given divider.
+    Format date or date_time with the given divider.
 
     ## Examples
 
@@ -1547,8 +1760,6 @@ defmodule Mandrake do
         "2015/12/31 10:30:15"
         iex>  Mandrake.DateTime.format({2015,12,31}, "/")
         "2015/12/31"
-        iex>  Mandrake.DateTime.format({10,30,15})
-        "10:30:15"
 
     """
     def format({{year, month, day}, {hour, minute, second}}, divider) do
@@ -1559,6 +1770,15 @@ defmodule Mandrake do
         format_date_time("~4..0B" <> divider <> "~2..0B" <> divider <> "~2..0B", [year, month, day])
     end
 
+    @doc """
+    Format time.
+
+    ## Examples
+
+        iex>  Mandrake.DateTime.format({10,30,15})
+        "10:30:15"
+
+    """
     def format({hour, minute, second}) do
         format_date_time("~2..0B:~2..0B:~2..0B", [hour, minute, second])
     end
@@ -1574,6 +1794,19 @@ defmodule Mandrake do
     """
     def dd_mm_yyyy({year, month, day}, divider) do
         format_date_time("~2..0B" <> divider <> "~2..0B" <> divider <> "~4..0B", [day, month, year])
+    end
+
+    @doc """
+    Format date to mm dd yyyy with the given divider.
+
+    ## Examples
+
+        iex>  Mandrake.DateTime.mm_dd_yyyy({2015,12,31}, "/")
+        "12/31/2015"
+
+    """
+    def mm_dd_yyyy({year, month, day}, divider) do
+        format_date_time("~2..0B" <> divider <> "~2..0B" <> divider <> "~4..0B", [month, day, year])
     end 
 
     @doc """
@@ -1799,8 +2032,22 @@ defmodule Mandrake do
 
     """
 
+    defmacro __using__(_opts) do
+      quote do
+        import Mandrake.TodoError
+      end
+    end
+
     defexception [:message]
 
+    @doc """
+    Raise TodoError with the given date and message.
+
+    ## Examples
+
+        iex>  raise Mandrake.TodoError.exception({{2015, 12, 31}, {0, 0, 0}}, "Description")
+
+    """
     def exception(date, message) do
       %TodoError{message: "\nTodo, time is over on #{inspect Mandrake.DateTime.format(date, "/")}.\nDescription: #{inspect message}"}
     end
@@ -1812,8 +2059,22 @@ defmodule Mandrake do
 
     """
 
+    defmacro __using__(_opts) do
+      quote do
+        import Mandrake.DeprecationError
+      end
+    end
+
     defexception [:message]
 
+    @doc """
+    Raise DeprecationError with the given date and message.
+
+    ## Examples
+
+        iex>  raise Mandrake.DeprecationError.exception({{2015, 12, 31}, {0, 0, 0}}, "Description")
+
+    """
     def exception(date, message) do
       %DeprecationError{message: "\nFix deprecation, time is over on #{inspect Mandrake.DateTime.format(date, "/")}.\nDescription: #{inspect message}"}
     end
@@ -1825,8 +2086,22 @@ defmodule Mandrake do
 
     """
 
+    defmacro __using__(_opts) do
+      quote do
+        import Mandrake.DocumentationNeededError
+      end
+    end
+
     defexception [:message]
 
+    @doc """
+    Raise DocumentationNeededError with the given date and message.
+
+    ## Examples
+
+        iex>  raise Mandrake.DocumentationNeededError.exception({{2015, 12, 31}, {0, 0, 0}}, "Description")
+
+    """
     def exception(date, message) do
       %DocumentationNeededError{message: "\nWrite documentation, time is over on #{inspect Mandrake.DateTime.format(date, "/")}.\nDescription: #{inspect message}"}
     end
@@ -1838,8 +2113,22 @@ defmodule Mandrake do
 
     """
 
+    defmacro __using__(_opts) do
+      quote do
+        import Mandrake.RedundancyError
+      end
+    end
+
     defexception [:message]
 
+    @doc """
+    Raise RedundancyError with the given date and message.
+
+    ## Examples
+
+        iex>  raise Mandrake.RedundancyError.exception({{2015, 12, 31}, {0, 0, 0}}, "Description")
+
+    """
     def exception(date, message) do
       %RedundancyError{message: "\nFix redundancy, time is over on #{inspect Mandrake.DateTime.format(date, "/")}.\nDescription: #{inspect message}"}
     end
@@ -1851,8 +2140,22 @@ defmodule Mandrake do
 
     """
 
+    defmacro __using__(_opts) do
+      quote do
+        import Mandrake.FixNeededError
+      end
+    end
+
     defexception [:message]
 
+    @doc """
+    Raise FixNeededError with the given date and message.
+
+    ## Examples
+
+        iex>  raise Mandrake.FixNeededError.exception({{2015, 12, 31}, {0, 0, 0}}, "Description")
+
+    """
     def exception(date, message) do
       %FixNeededError{message: "\nFix issue, time is over on #{inspect Mandrake.DateTime.format(date, "/")}.\nDescription: #{inspect message}"}
     end

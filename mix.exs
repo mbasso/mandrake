@@ -1,10 +1,10 @@
 defmodule Mandrake.Mixfile do
   use Mix.Project
 
-  @version "0.0.2"
+  @version "0.0.4"
 
   def project do
-    [app: :Mandrake,
+    [app: :mandrake,
      version: @version,
      elixir: "~> 1.1",
      build_embedded: Mix.env == :prod,
