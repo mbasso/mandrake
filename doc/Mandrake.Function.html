@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mandrake.Function – Mandrake v0.0.2</title>
+    <title>Mandrake.Function – Mandrake v0.0.4</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.11.1">
     <link rel="stylesheet" href="dist/app-6bc9434c82.css" />
@@ -28,7 +28,7 @@
         Mandrake
       </h1>
       <h2 class="sidebar-projectVersion">
-        v0.0.2
+        v0.0.4
       </h2>
     </div>
     
@@ -64,11 +64,11 @@
 
 
       <h1>
-        <small class="visible-xs">Mandrake v0.0.2</small>
+        <small class="visible-xs">Mandrake v0.0.4</small>
         Mandrake.Function
         
         
-          <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L311" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L323" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -107,6 +107,15 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#apply/2">apply(function, value)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Apply the second argument to the function</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#build_args/2">build_args(string, remaining)</a>
   </div>
   
@@ -138,15 +147,6 @@
 </div>
   
 </div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#tap/2">tap(function, value)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Call the given function with the given object</p>
-</div>
-  
-</div>
 
   </div>
 
@@ -175,7 +175,7 @@
     </a>
     <span class="signature">always(value)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L369" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L387" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -190,6 +190,27 @@
 
   </section>
 </div>
+<div class="detail" id="apply/2">
+  <div class="detail-header">
+    <a href="#apply/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">apply(function, value)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L353" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Apply the second argument to the function.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  mod = Mandrake.Function.apply(fn arg -&gt; -arg end, -2)
+2</code></pre>
+
+  </section>
+</div>
 <div class="detail" id="build_args/2">
   <div class="detail-header">
     <a href="#build_args/2" class="detail-link" title="Link to this function">
@@ -197,7 +218,7 @@
     </a>
     <span class="signature">build_args(string, remaining)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L338" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L336" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -214,7 +235,7 @@
     </a>
     <span class="signature">compose(first_function, second_function)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L396" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L414" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -236,7 +257,7 @@
     </a>
     <span class="signature">lambda(function, arity)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L328" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L367" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -258,7 +279,7 @@
     </a>
     <span class="signature">noop()</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L382" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L400" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -269,27 +290,6 @@
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  Mandrake.Function.noop()
 nil</code></pre>
-
-  </section>
-</div>
-<div class="detail" id="tap/2">
-  <div class="detail-header">
-    <a href="#tap/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">tap(function, value)</span>
-      
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L355" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-  </div>
-  
-  <section class="docstring">
-    <p>Call the given function with the given object.</p>
-<h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt;  Mandrake.Function.tap(fn arg -&gt; Mandrake.Math.inc(arg) end, 5)
-6</code></pre>
 
   </section>
 </div>

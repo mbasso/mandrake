@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mandrake.List – Mandrake v0.0.2</title>
+    <title>Mandrake.List – Mandrake v0.0.4</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.11.1">
     <link rel="stylesheet" href="dist/app-6bc9434c82.css" />
@@ -28,7 +28,7 @@
         Mandrake
       </h1>
       <h2 class="sidebar-projectVersion">
-        v0.0.2
+        v0.0.4
       </h2>
     </div>
     
@@ -64,11 +64,11 @@
 
 
       <h1>
-        <small class="visible-xs">Mandrake v0.0.2</small>
+        <small class="visible-xs">Mandrake v0.0.4</small>
         Mandrake.List
         
         
-          <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L553" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L591" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -128,7 +128,7 @@
     <a href="#contains/2">contains(value, list)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns true if list contains the given value</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if list contains the given value</p>
 </div>
   
 </div>
@@ -164,7 +164,7 @@
     <a href="#equals/1">equals(list)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns true if all elements in a list are equal</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if all elements in a list are equal</p>
 </div>
   
 </div>
@@ -173,7 +173,7 @@
     <a href="#first/2">first(func, list)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the first item of a list that returns true for the function</p>
+    <div class="summary-synopsis"><p>Returns the first item of a list that returns <code class="inline">true</code> for the function</p>
 </div>
   
 </div>
@@ -209,7 +209,7 @@
     <a href="#last/2">last(func, list)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the last item of a list that returns true for the function</p>
+    <div class="summary-synopsis"><p>Returns the last item of a list that returns <code class="inline">true</code> for the function</p>
 </div>
   
 </div>
@@ -264,6 +264,15 @@
   </div>
   
     <div class="summary-synopsis"><p>Returns a new list after prepending the new element</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reverse/1">reverse(list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a new list starting from the given value or nil</p>
 </div>
   
 </div>
@@ -340,7 +349,7 @@
     </a>
     <span class="signature">append(element, list)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L611" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L672" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -361,7 +370,7 @@
     </a>
     <span class="signature">best(function)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L638" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L699" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -383,7 +392,7 @@
     </a>
     <span class="signature">best(function, list)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L651" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L712" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -404,14 +413,14 @@
     </a>
     <span class="signature">contains(value, list)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L668" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L729" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns true if list contains the given value.</p>
+    <p>Returns <code class="inline">true</code> if list contains the given value.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  Mandrake.List.contains(3, [1, 2, 3, 4, 5])
 true</code></pre>
@@ -425,7 +434,7 @@ true</code></pre>
     </a>
     <span class="signature">delete(item)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L794" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L855" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -447,7 +456,7 @@ true</code></pre>
     </a>
     <span class="signature">delete(list, item)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L772" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L833" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -468,7 +477,7 @@ true</code></pre>
     </a>
     <span class="signature">difference(first_list, second_list)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L698" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L759" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -489,14 +498,14 @@ true</code></pre>
     </a>
     <span class="signature">equals(list)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L590" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L651" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns true if all elements in a list are equal.</p>
+    <p>Returns <code class="inline">true</code> if all elements in a list are equal.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  Mandrake.List.equals([7, 7, 7])
 true</code></pre>
@@ -510,14 +519,14 @@ true</code></pre>
     </a>
     <span class="signature">first(func, list)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L738" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L799" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns the first item of a list that returns true for the function.</p>
+    <p>Returns the first item of a list that returns <code class="inline">true</code> for the function.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  printHello = Mandrake.List.first(fn x -&gt; Kernel.rem(x, 2) == 0 end, [2, 4, 5, 7])
 2</code></pre>
@@ -531,7 +540,7 @@ true</code></pre>
     </a>
     <span class="signature">for_each(function, list)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L843" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L904" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -552,7 +561,7 @@ true</code></pre>
     </a>
     <span class="signature">from(value, list)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L569" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L630" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -573,7 +582,7 @@ true</code></pre>
     </a>
     <span class="signature">intersection(first_list, second_list)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L711" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L772" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -594,14 +603,14 @@ true</code></pre>
     </a>
     <span class="signature">last(func, list)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L724" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L785" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns the last item of a list that returns true for the function.</p>
+    <p>Returns the last item of a list that returns <code class="inline">true</code> for the function.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  Mandrake.List.last(fn x -&gt; Kernel.rem(x, 2) == 0 end, [2, 4, 5, 7, 8, 9])
 8</code></pre>
@@ -615,7 +624,7 @@ true</code></pre>
     </a>
     <span class="signature">of(value)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L759" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L820" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -636,7 +645,7 @@ true</code></pre>
     </a>
     <span class="signature">partition(function)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L931" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L992" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -658,7 +667,7 @@ true</code></pre>
     </a>
     <span class="signature">partition(function, list)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L944" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1005" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -679,7 +688,7 @@ true</code></pre>
     </a>
     <span class="signature">pluck(key)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L808" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L869" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -701,7 +710,7 @@ true</code></pre>
     </a>
     <span class="signature">pluck(list, key)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L821" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L882" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -722,7 +731,7 @@ true</code></pre>
     </a>
     <span class="signature">prepend(element, list)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L624" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L685" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -736,6 +745,27 @@ true</code></pre>
 
   </section>
 </div>
+<div class="detail" id="reverse/1">
+  <div class="detail-header">
+    <a href="#reverse/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">reverse(list)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L613" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a new list starting from the given value or nil.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.List.reverse([4, 7, 43, 6, 3, 7])
+[7, 3, 6, 43, 7, 4]</code></pre>
+
+  </section>
+</div>
 <div class="detail" id="select/1">
   <div class="detail-header">
     <a href="#select/1" class="detail-link" title="Link to this function">
@@ -743,7 +773,7 @@ true</code></pre>
     </a>
     <span class="signature">select(function)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L896" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L957" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -765,7 +795,7 @@ true</code></pre>
     </a>
     <span class="signature">select(function, list)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L909" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L970" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -786,7 +816,7 @@ true</code></pre>
     </a>
     <span class="signature">union(first_list, second_list)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L685" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L746" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -807,7 +837,7 @@ true</code></pre>
     </a>
     <span class="signature">while(function)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L861" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L922" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -829,7 +859,7 @@ true</code></pre>
     </a>
     <span class="signature">while(function, list)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L874" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L935" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

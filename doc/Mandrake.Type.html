@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mandrake.Type – Mandrake v0.0.2</title>
+    <title>Mandrake.Type – Mandrake v0.0.4</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.11.1">
     <link rel="stylesheet" href="dist/app-6bc9434c82.css" />
@@ -28,7 +28,7 @@
         Mandrake
       </h1>
       <h2 class="sidebar-projectVersion">
-        v0.0.2
+        v0.0.4
       </h2>
     </div>
     
@@ -64,11 +64,11 @@
 
 
       <h1>
-        <small class="visible-xs">Mandrake v0.0.2</small>
+        <small class="visible-xs">Mandrake v0.0.4</small>
         Mandrake.Type
         
         
-          <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1258" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1425" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -137,7 +137,7 @@
     <a href="#exists/1">exists(value)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns true if value is not nil</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if value is not nil</p>
 </div>
   
 </div>
@@ -146,7 +146,16 @@
     <a href="#falsy/1">falsy(value)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns true if value is nil or false</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if value is nil or false</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#is/2">is(type, value)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the type of the value is the given type</p>
 </div>
   
 </div>
@@ -155,7 +164,7 @@
     <a href="#is_nil/1">is_nil(value)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns true if value is nil</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if value is nil</p>
 </div>
   
 </div>
@@ -182,7 +191,7 @@
     <a href="#truthy/1">truthy(value)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns true if value is not nil or false</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if value is not nil or false</p>
 </div>
   
 </div>
@@ -223,7 +232,7 @@
     </a>
     <span class="signature">assign(first_tuple, second_tuple)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1274" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1447" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -244,7 +253,7 @@
     </a>
     <span class="signature">bool_false()</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1313" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1486" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -265,7 +274,7 @@ false</code></pre>
     </a>
     <span class="signature">bool_true()</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1300" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1473" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -286,7 +295,7 @@ true</code></pre>
     </a>
     <span class="signature">clone(object)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1287" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1460" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -307,14 +316,14 @@ true</code></pre>
     </a>
     <span class="signature">exists(value)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1414" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1602" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns true if value is not nil.</p>
+    <p>Returns <code class="inline">true</code> if value is not nil.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  Mandrake.Type.exists(&quot;Example&quot;)
 true
@@ -330,19 +339,42 @@ false</code></pre>
     </a>
     <span class="signature">falsy(value)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1444" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1632" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns true if value is nil or false.</p>
+    <p>Returns <code class="inline">true</code> if value is nil or false.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  Mandrake.Type.falsy(&quot;Example&quot;)
 false
 iex&gt;  Mandrake.Type.falsy(nil)
 true</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="is/2">
+  <div class="detail-header">
+    <a href="#is/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">is(type, value)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1516" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns <code class="inline">true</code> if the type of the value is the given type.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Type.is(Integer, 5)
+true
+iex&gt;  Mandrake.Type.is(List, 5)
+false</code></pre>
 
   </section>
 </div>
@@ -353,14 +385,14 @@ true</code></pre>
     </a>
     <span class="signature">is_nil(value)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1328" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1501" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns true if value is nil.</p>
+    <p>Returns <code class="inline">true</code> if value is nil.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  Mandrake.Type.is_nil([])
 false
@@ -376,7 +408,7 @@ true</code></pre>
     </a>
     <span class="signature">split(pattern)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1399" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1587" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -398,7 +430,7 @@ true</code></pre>
     </a>
     <span class="signature">trim(string)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1385" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1573" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -419,14 +451,14 @@ true</code></pre>
     </a>
     <span class="signature">truthy(value)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1429" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1617" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns true if value is not nil or false.</p>
+    <p>Returns <code class="inline">true</code> if value is not nil or false.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  Mandrake.Type.truthy(&quot;Example&quot;)
 true
@@ -442,7 +474,7 @@ false</code></pre>
     </a>
     <span class="signature">type_of(value)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1341" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1529" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

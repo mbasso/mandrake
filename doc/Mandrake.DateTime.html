@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mandrake.DateTime – Mandrake v0.0.2</title>
+    <title>Mandrake.DateTime – Mandrake v0.0.4</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.11.1">
     <link rel="stylesheet" href="dist/app-6bc9434c82.css" />
@@ -28,7 +28,7 @@
         Mandrake
       </h1>
       <h2 class="sidebar-projectVersion">
-        v0.0.2
+        v0.0.4
       </h2>
     </div>
     
@@ -64,11 +64,11 @@
 
 
       <h1>
-        <small class="visible-xs">Mandrake v0.0.2</small>
+        <small class="visible-xs">Mandrake v0.0.4</small>
         Mandrake.DateTime
         
         
-          <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1534" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1728" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -146,13 +146,16 @@
     <a href="#format/1">format(arg)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Format time</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#format/2">format(arg, divider)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Format date, time or date_time with the given divider</p>
+    <div class="summary-synopsis"><p>Format date or date_time with the given divider</p>
 </div>
   
 </div>
@@ -233,7 +236,7 @@
     <a href="#is_future/2">is_future(date_1, date_2)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns true if first date_time is &lt; than second</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if first date_time is &lt; than second</p>
 </div>
   
 </div>
@@ -242,7 +245,16 @@
     <a href="#is_past/2">is_past(date_1, date_2)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns true if first date_time is &gt; than second</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if first date_time is &gt; than second</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#mm_dd_yyyy/2">mm_dd_yyyy(arg, divider)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Format date to mm dd yyyy with the given divider</p>
 </div>
   
 </div>
@@ -292,7 +304,7 @@
     </a>
     <span class="signature">add_date(time)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1773" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1993" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -313,7 +325,7 @@
     </a>
     <span class="signature">add_time(date)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1786" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L2006" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -334,7 +346,7 @@
     </a>
     <span class="signature">dd_mm_yyyy(arg, divider)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1575" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1782" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -355,7 +367,7 @@
     </a>
     <span class="signature">extract_date(arg)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1695" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1915" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -376,7 +388,7 @@
     </a>
     <span class="signature">extract_time(arg)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1708" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1928" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -397,14 +409,18 @@
     </a>
     <span class="signature">format(arg)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1562" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1769" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    
+    <p>Format time.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.format({10,30,15})
+&quot;10:30:15&quot;</code></pre>
+
   </section>
 </div>
 <div class="detail" id="format/2">
@@ -414,21 +430,19 @@
     </a>
     <span class="signature">format(arg, divider)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1554" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1752" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Format date, time or date_time with the given divider.</p>
+    <p>Format date or date_time with the given divider.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.format({{2015,12,31}, {10,30,15}}, &quot;/&quot;)
 &quot;2015/12/31 10:30:15&quot;
 iex&gt;  Mandrake.DateTime.format({2015,12,31}, &quot;/&quot;)
-&quot;2015/12/31&quot;
-iex&gt;  Mandrake.DateTime.format({10,30,15})
-&quot;10:30:15&quot;</code></pre>
+&quot;2015/12/31&quot;</code></pre>
 
   </section>
 </div>
@@ -439,7 +453,7 @@ iex&gt;  Mandrake.DateTime.format({10,30,15})
     </a>
     <span class="signature">format_date_time(pattern, list)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1602" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1822" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -460,7 +474,7 @@ iex&gt;  Mandrake.DateTime.format({10,30,15})
     </a>
     <span class="signature">format_with_divider(divider)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1589" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1809" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -482,7 +496,7 @@ iex&gt;  Mandrake.DateTime.format({10,30,15})
     </a>
     <span class="signature">get()</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1617" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1837" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -503,7 +517,7 @@ iex&gt;  Mandrake.DateTime.format({10,30,15})
     </a>
     <span class="signature">get_date()</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1643" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1863" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -524,7 +538,7 @@ iex&gt;  Mandrake.DateTime.format({10,30,15})
     </a>
     <span class="signature">get_local()</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1630" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1850" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -545,7 +559,7 @@ iex&gt;  Mandrake.DateTime.format({10,30,15})
     </a>
     <span class="signature">get_local_date()</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1656" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1876" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -566,7 +580,7 @@ iex&gt;  Mandrake.DateTime.format({10,30,15})
     </a>
     <span class="signature">get_local_time()</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1682" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1902" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -587,7 +601,7 @@ iex&gt;  Mandrake.DateTime.format({10,30,15})
     </a>
     <span class="signature">get_time()</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1669" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1889" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -608,14 +622,14 @@ iex&gt;  Mandrake.DateTime.format({10,30,15})
     </a>
     <span class="signature">is_future(date_1, date_2)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1760" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1980" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns true if first date_time is &lt; than second.</p>
+    <p>Returns <code class="inline">true</code> if first date_time is &lt; than second.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.is_future({{2015, 11, 29}, {15, 34, 18}}, {{2015, 11, 28}, {15, 34, 18}})
 false</code></pre>
@@ -629,17 +643,38 @@ false</code></pre>
     </a>
     <span class="signature">is_past(date_1, date_2)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1747" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1967" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns true if first date_time is &gt; than second.</p>
+    <p>Returns <code class="inline">true</code> if first date_time is &gt; than second.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.is_past({{2015, 11, 29}, {15, 34, 18}}, {{2015, 11, 28}, {15, 34, 18}})
 true</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="mm_dd_yyyy/2">
+  <div class="detail-header">
+    <a href="#mm_dd_yyyy/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">mm_dd_yyyy(arg, divider)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1795" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Format date to mm dd yyyy with the given divider.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.DateTime.mm_dd_yyyy({2015,12,31}, &quot;/&quot;)
+&quot;12/31/2015&quot;</code></pre>
 
   </section>
 </div>
@@ -650,7 +685,7 @@ true</code></pre>
     </a>
     <span class="signature">offset(date_1, date_2)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1721" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1941" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -671,7 +706,7 @@ true</code></pre>
     </a>
     <span class="signature">seconds_to_date_time(seconds)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1734" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1954" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

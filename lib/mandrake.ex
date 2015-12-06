@@ -1210,7 +1210,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns always true.
+    Returns always `true`.
 
     ## Examples
 

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mandrake.Relation – Mandrake v0.0.2</title>
+    <title>Mandrake.Relation – Mandrake v0.0.4</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.11.1">
     <link rel="stylesheet" href="dist/app-6bc9434c82.css" />
@@ -28,7 +28,7 @@
         Mandrake
       </h1>
       <h2 class="sidebar-projectVersion">
-        v0.0.2
+        v0.0.4
       </h2>
     </div>
     
@@ -64,11 +64,11 @@
 
 
       <h1>
-        <small class="visible-xs">Mandrake v0.0.2</small>
+        <small class="visible-xs">Mandrake v0.0.4</small>
         Mandrake.Relation
         
         
-          <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L950" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1011" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -98,10 +98,28 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
+    <a href="#equals/2">equals(value_1, value_2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the given values are equal</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#equals_by/3">equals_by(function, value_1, value_2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the values produce the same result when passed to the provided function</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#gt/2">gt(first_value, second_value)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns true if first value is greater than the second</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if first value is greater than the second</p>
 </div>
   
 </div>
@@ -110,7 +128,7 @@
     <a href="#gte/2">gte(first_value, second_value)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns true if first value is greater than or equal to the second</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if first value is greater than or equal to the second</p>
 </div>
   
 </div>
@@ -119,7 +137,7 @@
     <a href="#lt/2">lt(first_value, second_value)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns true if first value is less than the second</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if first value is less than the second</p>
 </div>
   
 </div>
@@ -128,7 +146,43 @@
     <a href="#lte/2">lte(first_value, second_value)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns true if first value is less than or equal to the second</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if first value is less than or equal to the second</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#max/2">max(value_1, value_2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the larger of two arguments</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#max_by/3">max_by(function, value_1, value_2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the value that produces the larger result when passed to the provided function</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#min/2">min(value_1, value_2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the smaller of two arguments</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#min_by/3">min_by(function, value_1, value_2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the value that produces the smaller result when passed to the provided function</p>
 </div>
   
 </div>
@@ -153,21 +207,63 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="gt/2">
+          <div class="detail" id="equals/2">
   <div class="detail-header">
-    <a href="#gt/2" class="detail-link" title="Link to this function">
+    <a href="#equals/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">gt(first_value, second_value)</span>
+    <span class="signature">equals(value_1, value_2)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L992" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1114" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns true if first value is greater than the second.</p>
+    <p>Returns <code class="inline">true</code> if the given values are equal.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Relation.equals(&#39;0&#39;, 0)
+false</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="equals_by/3">
+  <div class="detail-header">
+    <a href="#equals_by/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">equals_by(function, value_1, value_2)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1101" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns <code class="inline">true</code> if the values produce the same result when passed to the provided function.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Relation.equals_by(fn arg -&gt; Mandrake.Math.abs(arg) end, [-3], [3])
+true</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="gt/2">
+  <div class="detail-header">
+    <a href="#gt/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">gt(first_value, second_value)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1153" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns <code class="inline">true</code> if first value is greater than the second.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  Mandrake.Relation.gt(7, 5)
 true</code></pre>
@@ -181,14 +277,14 @@ true</code></pre>
     </a>
     <span class="signature">gte(first_value, second_value)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L1005" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1166" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns true if first value is greater than or equal to the second.</p>
+    <p>Returns <code class="inline">true</code> if first value is greater than or equal to the second.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  Mandrake.Relation.gte(7, 7)
 true</code></pre>
@@ -202,14 +298,14 @@ true</code></pre>
     </a>
     <span class="signature">lt(first_value, second_value)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L966" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1127" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns true if first value is less than the second.</p>
+    <p>Returns <code class="inline">true</code> if first value is less than the second.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  Mandrake.Relation.lt(7, 5)
 false</code></pre>
@@ -223,17 +319,101 @@ false</code></pre>
     </a>
     <span class="signature">lte(first_value, second_value)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L979" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1140" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns true if first value is less than or equal to the second.</p>
+    <p>Returns <code class="inline">true</code> if first value is less than or equal to the second.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  Mandrake.Relation.lte(7, 7)
 true</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="max/2">
+  <div class="detail-header">
+    <a href="#max/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">max(value_1, value_2)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1033" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns the larger of two arguments.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Relation.max(&#39;a&#39;, &#39;z&#39;)
+&#39;z&#39;</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="max_by/3">
+  <div class="detail-header">
+    <a href="#max_by/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">max_by(function, value_1, value_2)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1050" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns the value that produces the larger result when passed to the provided function.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Relation.max_by(fn arg -&gt; Mandrake.Math.negate(arg) end, -3, -6)
+-6</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="min/2">
+  <div class="detail-header">
+    <a href="#min/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">min(value_1, value_2)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1067" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns the smaller of two arguments.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Relation.min(&#39;a&#39;, &#39;z&#39;)
+&#39;a&#39;</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="min_by/3">
+  <div class="detail-header">
+    <a href="#min_by/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">min_by(function, value_1, value_2)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L1084" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns the value that produces the smaller result when passed to the provided function.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  Mandrake.Relation.min_by(fn arg -&gt; Mandrake.Math.negate(arg) end, -3, -6)
+-6</code></pre>
 
   </section>
 </div>

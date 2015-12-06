@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mandrake.Logic – Mandrake v0.0.2</title>
+    <title>Mandrake.Logic – Mandrake v0.0.4</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.11.1">
     <link rel="stylesheet" href="dist/app-6bc9434c82.css" />
@@ -28,7 +28,7 @@
         Mandrake
       </h1>
       <h2 class="sidebar-projectVersion">
-        v0.0.2
+        v0.0.4
       </h2>
     </div>
     
@@ -64,11 +64,11 @@
 
 
       <h1>
-        <small class="visible-xs">Mandrake v0.0.2</small>
+        <small class="visible-xs">Mandrake v0.0.4</small>
         Mandrake.Logic
         
         
-          <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L402" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L420" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -101,7 +101,16 @@
     <a href="#both/2">both(first_func, second_func)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns true if both functions return true</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if both functions return true</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#complement/1">complement(function)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a function that return !result of the given function</p>
 </div>
   
 </div>
@@ -119,7 +128,7 @@
     <a href="#either/2">either(first_func, second_func)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns true if one function return true</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if one function return true</p>
 </div>
   
 </div>
@@ -137,7 +146,7 @@
     <a href="#is_empty/1">is_empty(value)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns true if value is “”, ‘’, [], {} or %{}</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if value is “”, ‘’, [], {} or %{}</p>
 </div>
   
 </div>
@@ -146,16 +155,16 @@
     <a href="#logic_and/2">logic_and(first_cond, second_cond)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns true if both conditions are true</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if both conditions are true</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#logic_if/2">logic_if(condition, onTrue)</a>
+    <a href="#logic_if/2">logic_if(condition, on_true)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns a function that process onTrue if condition is true</p>
+    <div class="summary-synopsis"><p>Returns a function that process on_true if condition is true</p>
 </div>
   
 </div>
@@ -173,7 +182,7 @@
     <a href="#logic_or/2">logic_or(first_cond, second_cond)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns true if one condition is true</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if one condition is true</p>
 </div>
   
 </div>
@@ -205,19 +214,41 @@
     </a>
     <span class="signature">both(first_func, second_func)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L451" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L489" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns true if both functions return true</p>
+    <p>Returns <code class="inline">true</code> if both functions return true</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  my_function = Mandrake.Logic.both(fn x -&gt; x &gt; 10 end, fn x -&gt; Kernel.rem(x, 2) == 0 end)
 ...&gt;  my_function.(100)
 true
 iex&gt;  my_function.(101)
+false</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="complement/1">
+  <div class="detail-header">
+    <a href="#complement/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">complement(function)</span>
+      
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L443" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a function that return !result of the given function.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt;  is_odd = Mandrake.Logic.complement(fn arg -&gt; Kernel.rem(arg, 2) == 0 end)
+...&gt;  is_odd.(24)
 false</code></pre>
 
   </section>
@@ -229,7 +260,7 @@ false</code></pre>
     </a>
     <span class="signature">default_to(value)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L541" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L579" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -253,14 +284,14 @@ iex&gt;  default_to_7.(12)
     </a>
     <span class="signature">either(first_func, second_func)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L467" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L505" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns true if one function return true</p>
+    <p>Returns <code class="inline">true</code> if one function return true</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  my_function = Mandrake.Logic.either(fn x -&gt; x &gt; 10 end, fn x -&gt; Kernel.rem(x, 2) == 0 end)
 ...&gt;  my_function.(100)
@@ -277,7 +308,7 @@ true</code></pre>
     </a>
     <span class="signature">ifElse(condition, onTrue, onFalse)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L420" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L458" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -300,14 +331,14 @@ true</code></pre>
     </a>
     <span class="signature">is_empty(value)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L482" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L520" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns true if value is “”, ‘’, [], {} or %{}.</p>
+    <p>Returns <code class="inline">true</code> if value is “”, ‘’, [], {} or %{}.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  Mandrake.Logic.is_empty([])
 true
@@ -323,14 +354,14 @@ false</code></pre>
     </a>
     <span class="signature">logic_and(first_cond, second_cond)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L499" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L537" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns true if both conditions are true.</p>
+    <p>Returns <code class="inline">true</code> if both conditions are true.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  Mandrake.Logic.logic_and(1&lt;2, 3&gt;4)
 false</code></pre>
@@ -342,16 +373,16 @@ false</code></pre>
     <a href="#logic_if/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">logic_if(condition, onTrue)</span>
+    <span class="signature">logic_if(condition, on_true)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L435" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L473" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns a function that process onTrue if condition is true.</p>
+    <p>Returns a function that process on_true if condition is true.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  my_number = 1
 ...&gt;  my_function = Mandrake.Logic.logic_if(my_number &lt;= 1, fn arg -&gt; Mandrake.Math.inc(arg) end)
@@ -367,7 +398,7 @@ false</code></pre>
     </a>
     <span class="signature">logic_not(value)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L525" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L563" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -388,14 +419,14 @@ true</code></pre>
     </a>
     <span class="signature">logic_or(first_cond, second_cond)</span>
       
-      <a href="https://github.com/mbasso/mandrake/blob/v0.0.2/lib/mandrake.ex#L512" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/mbasso/mandrake/blob/v0.0.4/lib/mandrake.ex#L550" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Returns true if one condition is true.</p>
+    <p>Returns <code class="inline">true</code> if one condition is true.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  Mandrake.Logic.logic_or(1&lt;2, 3&gt;4)
 true</code></pre>
