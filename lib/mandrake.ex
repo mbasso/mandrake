@@ -372,19 +372,6 @@ defmodule Mandrake do
         end
         if is_nil(args) do args = build_args("arg" <> to_string(arity), arity-1) end
         List.first(Tuple.to_list(Code.eval_string("fn " <> args <> " -> " <> function <> "(" <> args <> ") end")))
-    end    
-
-    @doc """
-    Call the given function with the given object.
-
-    ## Examples
-
-        iex>  Mandrake.Function.tap(fn arg -> Mandrake.Math.inc(arg) end, 5)
-        6
-        
-    """
-    def tap(function, value) do
-      function.(value)
     end
 
     @doc """
@@ -488,7 +475,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if both functions return true
+    Returns `true` if both functions return true
 
     ## Examples
 
@@ -504,7 +491,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if one function return true
+    Returns `true` if one function return true
 
     ## Examples
 
@@ -520,7 +507,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if value is "", '', [], {} or %{}.
+    Returns `true` if value is "", '', [], {} or %{}.
 
     ## Examples
 
@@ -539,7 +526,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if both conditions are true.
+    Returns `true` if both conditions are true.
 
     ## Examples
 
@@ -552,7 +539,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if one condition is true.
+    Returns `true` if one condition is true.
 
     ## Examples
 
@@ -653,7 +640,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if all elements in a list are equal.
+    Returns `true` if all elements in a list are equal.
 
     ## Examples
 
@@ -731,7 +718,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if list contains the given value.
+    Returns `true` if list contains the given value.
 
     ## Examples
 
@@ -787,7 +774,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns the last item of a list that returns true for the function.
+    Returns the last item of a list that returns `true` for the function.
 
     ## Examples
 
@@ -801,7 +788,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns the first item of a list that returns true for the function.
+    Returns the first item of a list that returns `true` for the function.
 
     ## Examples
 
@@ -1103,7 +1090,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if the values produce the same result when passed to the provided function.
+    Returns `true` if the values produce the same result when passed to the provided function.
 
     ## Examples
 
@@ -1116,7 +1103,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if the given values are equal.
+    Returns `true` if the given values are equal.
 
     ## Examples
 
@@ -1129,7 +1116,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if first value is less than the second.
+    Returns `true` if first value is less than the second.
 
     ## Examples
 
@@ -1142,7 +1129,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if first value is less than or equal to the second.
+    Returns `true` if first value is less than or equal to the second.
 
     ## Examples
 
@@ -1155,7 +1142,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if first value is greater than the second.
+    Returns `true` if first value is greater than the second.
 
     ## Examples
 
@@ -1168,7 +1155,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if first value is greater than or equal to the second.
+    Returns `true` if first value is greater than or equal to the second.
 
     ## Examples
 
@@ -1236,7 +1223,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if the given value is a valid email.
+    Returns `true` if the given value is a valid email.
 
     ## Examples
 
@@ -1249,7 +1236,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if the given value is a valid amount.
+    Returns `true` if the given value is a valid amount.
 
     ## Examples
 
@@ -1266,7 +1253,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if the given value is a valid gender (m/M, f/F).
+    Returns `true` if the given value is a valid gender (m/M, f/F).
 
     ## Examples
 
@@ -1279,7 +1266,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if the given value is a valid year.
+    Returns `true` if the given value is a valid year.
 
     ## Examples
 
@@ -1292,7 +1279,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if the given value is a valid number.
+    Returns `true` if the given value is a valid number.
 
     ## Examples
 
@@ -1305,7 +1292,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if the given value is a valid name.
+    Returns `true` if the given value is a valid name.
 
     ## Examples
 
@@ -1320,7 +1307,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if the given value is a valid phone number.
+    Returns `true` if the given value is a valid phone number.
 
     ## Examples
 
@@ -1343,7 +1330,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if the given value is a valid username (letters, numbers, underscores, hyphens, 3 < username_length < 18).
+    Returns `true` if the given value is a valid username (letters, numbers, underscores, hyphens, 3 < username_length < 18).
 
     ## Examples
 
@@ -1356,7 +1343,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if the given value is a valid password (letters, numbers, underscores, hyphens, 6 < password_length < 18).
+    Returns `true` if the given value is a valid password (letters, numbers, underscores, hyphens, 6 < password_length < 18).
 
     ## Examples
 
@@ -1369,7 +1356,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if the given value is a valid hex.
+    Returns `true` if the given value is a valid hex.
 
     ## Examples
 
@@ -1382,7 +1369,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if the given value is a valid slug.
+    Returns `true` if the given value is a valid slug.
 
     ## Examples
 
@@ -1395,7 +1382,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if the given value is a valid url.
+    Returns `true` if the given value is a valid url.
 
     ## Examples
 
@@ -1408,7 +1395,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if the given value is a valid ip address.
+    Returns `true` if the given value is a valid ip address.
 
     ## Examples
 
@@ -1421,7 +1408,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if the given value is a valid html tag.
+    Returns `true` if the given value is a valid html tag.
 
     ## Examples
 
@@ -1501,7 +1488,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if value is nil.
+    Returns `true` if value is nil.
     
     ## Examples
 
@@ -1516,7 +1503,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if value is nil.
+    Returns `true` if the type of the value is the given type.
     
     ## Examples
 
@@ -1602,7 +1589,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if value is not nil.
+    Returns `true` if value is not nil.
 
     ## Examples
 
@@ -1617,7 +1604,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if value is not nil or false.
+    Returns `true` if value is not nil or false.
 
     ## Examples
 
@@ -1632,7 +1619,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if value is nil or false.
+    Returns `true` if value is nil or false.
 
     ## Examples
 
@@ -1969,7 +1956,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if first date_time is > than second.
+    Returns `true` if first date_time is > than second.
 
     ## Examples
 
@@ -1982,7 +1969,7 @@ defmodule Mandrake do
     end
 
     @doc """
-    Returns true if first date_time is < than second.
+    Returns `true` if first date_time is < than second.
 
     ## Examples
 
