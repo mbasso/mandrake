@@ -31,7 +31,7 @@ The package can be installed from hex as:
   1. Add mandrake to your list of dependencies in `mix.exs`:
   ```elixir
   def deps do
-    [{:mandrake, "~> 0.0.1"}]
+    [{:mandrake, "~> 0.0.4"}]
   end
   ```
 
