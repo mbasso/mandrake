@@ -1,4 +1,4 @@
-# Mandrake
+<img src="https://github.com/mbasso/mandrake/blob/master/header.png" height="100">
 > ### Facility, Prosperity and Maintainability.
 > A functional programming library that bring something else magic in elixir.
 
